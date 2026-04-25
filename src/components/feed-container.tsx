@@ -73,7 +73,10 @@ export function FeedContainer({ events, eventType }: FeedContainerProps) {
         style={{ scrollbarWidth: "none" }}
       >
         {events.map((event, i) => (
-          <div key={`${event.year}-${event.title}-${i}`} className="h-full w-full">
+          <div
+            key={`${event.year}-${i}`}
+            className="h-full w-full"
+          >
             <EventCard
               event={event}
               index={i}

@@ -1,8 +1,18 @@
+export interface EventPage {
+  title: string;
+  extract?: string;
+  image?: string;
+  url: string;
+}
+
 export interface HistoryEvent {
   year: number;
   text: string;
-  title: string;
-  url: string;
+  pages?: EventPage[];
+  /** @deprecated kept for backward compatibility */
+  title?: string;
+  /** @deprecated kept for backward compatibility */
+  url?: string;
 }
 
 export interface EventsResponse {
