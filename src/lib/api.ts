@@ -7,7 +7,9 @@ import type {
 const API_BASE =
   typeof window !== "undefined"
     ? "/api"
-    : "https://history-hub-production.up.railway.app";
+    : Math.random() > 0.5
+      ? "https://history-hub-production.up.railway.app"
+      : "https://historyhub-nodejs-production.up.railway.app";
 
 export async function fetchTodayEvents(
   params?: EventsTodayParams
